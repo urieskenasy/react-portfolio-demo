@@ -1,38 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: "Cairo", sans-serif;
+}
+
 .App {
-  text-align: center;
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* NAV */
+
+.nav-container {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 2.5vw;
+    background: rgb(25, 25, 25);
+    z-index: 100;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-container-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-container-ul-li {
+    list-style: none;
+    padding: 60px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-container-ul-li-link {
+    text-decoration: none;
+    color: white;
+}
+
+.icon {
+    color: white;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: rgb(190, 113, 4);
+    animation: pulsate-fwd 0.7s ease-in-out infinite both;
+}
+
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }

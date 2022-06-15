@@ -1,0 +1,80 @@
+.contact-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.contact-form-container {
+    width: 100vw;
+    height: 49vh;
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.contact-form-container form label {
+    margin-bottom: 7px;
+}
+
+.contact-form-container form input {
+    margin-bottom: 7px;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+}
+
+.contact-form-container form textarea {
+    margin-bottom: 7px;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+}
+
+.contact-form-container form button {
+    margin-bottom: 7px;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    background: transparent;
+    color: white;
+    border: solid white 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-form-container form button:hover {
+    font-size: 1.2rem;
+    border: solid white 1px;
+    background: white;
+    color: black;
+}
+
+.social-media-container {
+    margin-top: 10px;
+}
+
+.social-media-container ul {
+    display: flex;
+}
+
+.social-media-container ul li {
+    list-style: none;
+    margin-left: 30px;
+    font-size: 5rem;
+}
+
+.social-media-container ul li a {
+    color: white;
+}
