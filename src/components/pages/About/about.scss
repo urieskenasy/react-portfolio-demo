@@ -65,3 +65,80 @@ p:hover {
     // animation: bounceIn 1s 1s;
     // animation: rubberBand 1s;
 }
+
+@media  screen and (max-width:425px){
+    .about-container {
+        width: 100vw;
+        height: 100vh;
+        padding-left: 6px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: no-wrap;
+    }
+    
+    .about-h1-p-container {
+        width: 100%;
+        h1{
+            span{
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    .about-h1-container {
+        width: 100%;
+        height:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-img-container {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("./img/Uri.jpeg");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        border-radius: 50%;
+        margin-bottom: 5px;
+        padding: 15px;
+    }
+    
+    .about-img-container img {
+        height: 50%;
+        width: 50%;
+    }
+    
+    .about-p-container {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .about-p-container p {
+        padding: 10px;
+        // animation: flicker-in-1 3s linear both;
+        animation-delay: 1.2s;
+        transition: ease 0.4s;
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    // p:nth-child(1) {
+    //     animation-delay: 1.2s;
+    // }
+    // p:nth-child(2) {
+    //     animation-delay: 2.2s;
+    // }
+    // p:nth-child(3) {
+    //     animation-delay: 3.2s;
+    // }
+    p:hover {
+        cursor: pointer;
+        // animation: bounceIn 1s 1s;
+        // animation: rubberBand 1s;
+    }
+}

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
-
 $primary-color: #ffd700;
+
+@import '~loaders.css/src/animations/ball-grid-pulse.scss';
+@import   "animate.css";
 
 * {
     margin: 0;
@@ -31,6 +33,7 @@ main {
     width: 2.5vw;
     background: rgb(25, 25, 25);
     z-index: 100;
+    align-items: center;
 }
 
 .nav-container-ul {
@@ -38,29 +41,39 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 50%;
 }
 
 .nav-container-ul-li {
     list-style: none;
-    padding: 60px 0;
+    padding: 0px 0;
 }
 
 .nav-container-ul-li-link {
     text-decoration: none;
     color: white;
+
+    
 }
 
 .icon {
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     transition: all 0.3s ease-in-out;
+}
+
+.active {
+
+    svg {
+        color: #ffd700;
+    animation: bounceIn 1s 1s;
+
+    }
 }
 
 .icon:hover {
     color: #ffd700;
     animation: pulsate-fwd 0.7s ease-in-out infinite both;
-    animation: bounceIn 1s 1s;
-    
 }
 
 @keyframes pulsate-fwd {
@@ -78,8 +91,6 @@ main {
     }
 }
 
-@import '~loaders.css/src/animations/ball-grid-pulse.scss';
-@import   "animate.css";
 
 .loader-active {
     display:block;
@@ -95,4 +106,106 @@ main {
 }
 .loader-hidden {
     display: none;
+  }
+
+  @media  screen and (max-width:425px){
+    .App {
+        position: relative;
+    }
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    /* NAV */
+    
+    .nav-container {
+        position: absolute;
+        display: flex;
+        height: auto;
+        width: 6vw;
+        background: rgb(25, 25, 25);
+        z-index: 100;
+        top: 50%;
+        left: 0 ;
+        transform: translateY(-50%);
+        align-items: center;
+        
+    }
+    
+    .nav-container-ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+    
+    .nav-container-ul-li {
+        list-style: none;
+        padding: 0px 0;
+    }
+    
+    .nav-container-ul-li-link {
+        text-decoration: none;
+        color: white;
+    
+        
+    }
+    
+    .icon {
+        color: white;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .active {
+    
+        svg {
+            color: #ffd700;
+        animation: bounceIn 1s 1s;
+    
+        }
+    }
+    
+    .icon:hover {
+        color: #ffd700;
+        animation: pulsate-fwd 0.7s ease-in-out infinite both;
+    }
+    
+    @keyframes pulsate-fwd {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    
+    
+    .loader-active {
+        display:block;
+        position: absolute;
+        left: 50%;
+        // margin: auto;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        width :50px ;
+        height: 50px;
+        animation: fadeOut 1s 1s;
+        animation-fill-mode: forwards;
+    }
+    .loader-hidden {
+        display: none;
+      }
   }

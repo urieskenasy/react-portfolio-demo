@@ -39,7 +39,8 @@ div {
 }
 
 .homePage-h1 {
-    font-size: 5rem;
+
+
     &::before {
         content: "<h1>";
         font-family: "Indie Flower", cursive;
@@ -109,4 +110,121 @@ p:hover {
     position: absolute;
     top: 100px;
     right: 100px;
+}
+
+@media screen and (min-width:420px) {
+
+    .home-container {
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .h1-p-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .home-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width:auto;
+        height: 100vh;
+    }
+    
+
+    
+    .homePage-h1 {
+        span{
+            font-size: 2rem;
+        }
+
+        &::before {
+            content: "<h1>";
+            font-family: "Indie Flower", cursive;
+            color: #ffd700;
+            font-size: 1rem;
+            position: absolute;
+            margin-top: -4px;
+            left: 50px;
+            opacity: 0.6;
+            top: 155px;
+        }
+        &::after {
+            content: "<h1/>";
+            font-family: "Indie Flower", cursive;
+            color: #ffd700;
+            font-size: 1rem;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 20px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 0.6;
+            bottom: 280px;
+            left: 300px;
+            bottom: 170px;
+        }
+    }
+    
+    h1:nth-child(1) {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    
+    
+    p {
+        // padding: 15px;
+        // animation: flicker-in-1 3s linear both;
+        animation-delay: 1.2s;
+        transition: ease 0.4s;
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+    
+    p:hover {
+        cursor: pointer;
+    }
+    
+    .top-tags {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-family: "Indie Flower", cursive;
+        font-size: 1rem;
+        color: #ffd700;
+        opacity: 0.6;
+    }
+    
+    .bottom-tag-html {
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        font-size: 1rem;
+        font-family: "Indie Flower", cursive;
+        color: #ffd700;
+        opacity: 0.6;
+    }
+    
+    .logo-container > svg {
+        transform:  scale(0.5);
+        position: absolute;
+        
+        top: 275px;
+        left: -110px;
+        display: block;
+    }
+
 }
