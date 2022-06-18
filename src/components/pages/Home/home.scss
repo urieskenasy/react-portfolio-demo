@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+div {
+    color: white;
+}
+.home-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.h1-p-container {
+    width: 49vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+}
+
+.home-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 49vw;
+    height: 100vh;
+}
+
+.home-image-container img {
+    width: 600px;
+    height: 600px;
+}
+
+.homePage-h1 {
+    font-size: 5rem;
+    &::before {
+        content: "<h1>";
+        font-family: "Indie Flower", cursive;
+        color: #ffd700;
+        font-size: 2rem;
+        position: absolute;
+        margin-top: -20px;
+        left: 225px;
+        opacity: 0.6;
+    }
+    &::after {
+        content: "<h1/>";
+        font-family: "Indie Flower", cursive;
+        color: #ffd700;
+        font-size: 2rem;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: 20px;
+        animation: fadeIn 1s 1.7s backwards;
+        opacity: 0.6;
+        bottom: 280px;
+        left: 750px;
+    }
+}
+
+h1:nth-child(1) {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+
+p {
+    // padding: 15px;
+    // animation: flicker-in-1 3s linear both;
+    animation-delay: 1.2s;
+    transition: ease 0.4s;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+p:hover {
+    cursor: pointer;
+}
+
+.top-tags {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.5rem;
+    color: #ffd700;
+    opacity: 0.6;
+}
+
+.bottom-tag-html {
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+    font-size: 1.5rem;
+    font-family: "Indie Flower", cursive;
+    color: #ffd700;
+    opacity: 0.6;
+}
+
+.logo-container > svg {
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}

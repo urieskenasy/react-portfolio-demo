@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$primary-color: #ffd700;
+
 * {
     margin: 0;
     padding: 0;
@@ -54,8 +57,10 @@ main {
 }
 
 .icon:hover {
-    color: rgb(190, 113, 4);
+    color: #ffd700;
     animation: pulsate-fwd 0.7s ease-in-out infinite both;
+    animation: bounceIn 1s 1s;
+    
 }
 
 @keyframes pulsate-fwd {
@@ -72,3 +77,22 @@ main {
         transform: scale(1);
     }
 }
+
+@import '~loaders.css/src/animations/ball-grid-pulse.scss';
+@import   "animate.css";
+
+.loader-active {
+    display:block;
+    position: absolute;
+    left: 50%;
+    // margin: auto;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width :50px ;
+    height: 50px;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+}
+.loader-hidden {
+    display: none;
+  }

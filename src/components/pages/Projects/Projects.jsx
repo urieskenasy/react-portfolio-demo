@@ -1,8 +1,19 @@
-import React, { useState } from "react";
-import "./projects.css";
+import React, { useState, useEffect } from "react";
+import "./projects.scss";
 import AnimatedPage from "../../AnimatedPage";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import AnimatedLetters from "../../animatedLetters/AnimatedLetters";
+import Loader from "react-loaders";
 export default function Projects() {
+    //
+    const [letterClass, setLetterClass] = useState("text-animate");
+    //
+    useEffect(() => {
+        setTimeout(() => {
+            setLetterClass("text-animate-hover");
+        }, 3000);
+    }, []);
+
     const projects = [
         {
             title: "todos-mini-app",
@@ -86,46 +97,74 @@ export default function Projects() {
     }
 
     return (
-        <AnimatedPage>
-            <div className="projects-container">
-                <h1>my projects</h1>
-                <IoIosArrowBack className="left-arrow" onClick={prevSlide} />
-                <IoIosArrowForward
-                    className="right-arrow"
-                    onClick={nextSlide}
-                />
-                {projects.map((item, i) => {
-                    return (
-                        <div
-                            className={i === current ? "slide active" : "slide"}
-                            key={i}
-                        >
-                            {i === current && (
-                                <div className="project-card-container">
-                                    <img
-                                        style={{
-                                            width: "1000px",
-                                            height: " 500px",
-                                        }}
-                                        src={require(`${item.imageUrl}`)}
-                                    />
-                                    <h2>{item.title}</h2>
-                                    <h3>{item.text}</h3>
-                                    <div className="span-container">
-                                        <span>
-                                            <a href={item.gitHubUrl}>gitHub</a>
-                                        </span>
-                                        <span>
-                                            <a href="">live demo</a>
-                                        </span>
+        <>
+            <AnimatedPage>
+                <div className="projects-container">
+                    <h1>
+                        <AnimatedLetters
+                            strArray={[
+                                "M",
+                                "y",
+                                " ",
+                                "P",
+                                "r",
+                                "o",
+                                "j",
+                                "e",
+                                "c",
+                                "t",
+                                "s",
+                            ]}
+                            idx={15}
+                            letterClass={letterClass}
+                        />
+                    </h1>
+                    <IoIosArrowBack
+                        className="left-arrow"
+                        onClick={prevSlide}
+                    />
+                    <IoIosArrowForward
+                        className="right-arrow"
+                        onClick={nextSlide}
+                    />
+                    {projects.map((item, i) => {
+                        return (
+                            <div
+                                className={
+                                    i === current ? "slide active" : "slide"
+                                }
+                                key={i}
+                            >
+                                {i === current && (
+                                    <div className="project-card-container">
+                                        <img
+                                            style={{
+                                                width: "1000px",
+                                                height: " 500px",
+                                            }}
+                                            src={require(`${item.imageUrl}`)}
+                                        />
+                                        <h2>{item.title}</h2>
+                                        <h3>{item.text}</h3>
+                                        <div className="span-container">
+                                            <span>
+                                                <a href={item.gitHubUrl}>
+                                                    gitHub
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href="">live demo</a>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                    );
-                })}
-            </div>
-        </AnimatedPage>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </AnimatedPage>
+            <Loader type="ball-grid-pulse" style={{ transform: "scale(2)" }} />
+        </>
     );
 }
 

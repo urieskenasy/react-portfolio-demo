@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaHouseUser } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
@@ -10,30 +10,46 @@ export default function Nav() {
         <div className="nav-container">
             <ul className="nav-container-ul">
                 <li className="nav-container-ul-li">
-                    <Link to="/">
+                    <NavLink to="/" activeclassname="active">
                         <FaHouseUser className="icon" />
-                    </Link>
+                    </NavLink>
                 </li>
                 <li className="nav-container-ul-li">
-                    <Link to="/About" className="nav-container-ul-li-link">
+                    <NavLink
+                        to="/About"
+                        className="nav-container-ul-li-link"
+                        activeclassname="active"
+                    >
                         <FaInfoCircle className="icon" />
-                    </Link>
+                    </NavLink>
                 </li>
 
                 <li className="nav-container-ul-li">
-                    <Link to="/Skills" className="nav-container-ul-li-link">
+                    <NavLink
+                        to="/Skills"
+                        className="nav-container-ul-li-link"
+                        activeclassname="active"
+                    >
                         <FaBuffer className="icon" />
-                    </Link>
+                    </NavLink>
                 </li>
                 <li className="nav-container-ul-li">
-                    <Link to="/Projects" className="nav-container-ul-li-link">
+                    <NavLink
+                        to="/Projects"
+                        className="nav-container-ul-li-link"
+                        activeclassname="active"
+                    >
                         <FaProjectDiagram className="icon" />
-                    </Link>
+                    </NavLink>
                 </li>
                 <li className="nav-container-ul-li">
-                    <Link to="/Contact" className="nav-container-ul-li-link">
+                    <NavLink
+                        to="/Contact"
+                        className="nav-container-ul-li-link"
+                        activeclassname="active"
+                    >
                         <FaHandshake className="icon" />
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </div>

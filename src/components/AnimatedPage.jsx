@@ -13,7 +13,8 @@ export default function AnimatedPage({ children }) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.9 , delay: 1 }}
+        
         >
             {children}
         </motion.div>

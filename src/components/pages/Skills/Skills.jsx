@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AnimatedPage from "../../AnimatedPage";
-import "./skills.css";
+import "./skills.scss";
+import Loader from "react-loaders";
 export default function Skills() {
     const skills = [
         "Html",
@@ -69,24 +70,27 @@ export default function Skills() {
         setText(url.text);
     };
     return (
-        <AnimatedPage>
-            <div className="skills-container">
-                <div className="skills-container-ul">
-                    <ul>
-                        {skills.map((item, i) => (
-                            <li onMouseEnter={() => handleMouseEnter(item)}>
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                {imgUrl && (
-                    <div className="skills-container-images">
-                        <img src={imgUrl} />
-                        <span className="skills-span">{text}</span>
+        <>
+            <AnimatedPage>
+                <div className="skills-container">
+                    <div className="skills-container-ul">
+                        <ul>
+                            {skills.map((item, i) => (
+                                <li onMouseEnter={() => handleMouseEnter(item)}>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                )}
-            </div>
-        </AnimatedPage>
+                    {imgUrl && (
+                        <div className="skills-container-images">
+                            <img src={imgUrl} />
+                            <span className="skills-span">{text}</span>
+                        </div>
+                    )}
+                </div>
+            </AnimatedPage>
+            <Loader type="ball-grid-pulse" style={{transform: 'scale(2)'}} />
+        </>
     );
 }
