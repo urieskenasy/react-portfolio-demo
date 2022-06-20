@@ -133,3 +133,49 @@
         }
     }
 }
+
+@media screen and (max-width: 550px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form-container form {
+        font-size: 0.8rem;
+    }
+
+    .contact-form-container form input {
+        font-size: 0.8rem;
+    }
+
+    .contact-form-container form textarea {
+        font-size: 0.8rem;
+    }
+
+    .contact-form-container form button {
+        font-size: 0.8rem;
+    }
+
+    .contact-form-container form button:hover {
+        font-size: 1rem;
+    }
+
+    .social-media-container > h2 {
+        font-size: 1.2rem;
+    }
+
+    .social-media-container ul li {
+        font-size: 1.4rem;
+    }
+
+    .social-media-container ul li a {
+        color: white;
+    }
+
+    .map-wrap {
+        width: 100vw;
+    }
+
+    .info-map {
+        display: none;
+    }
+}

@@ -120,7 +120,7 @@ export default function Contact() {
                         <br />
                         germany
                         <br />
-                        Kleiststrae 37b, 10787 Schöneberg, Berlin
+                        Kleiststrae 37b, 10787, Berlin
                         <br />
                         Germany
                         <br />
@@ -128,7 +128,7 @@ export default function Contact() {
                     </div>
                     <div class="map-wrap">
                         <MapContainer
-                            center={[52.4998513, 13.3497922]}
+                            center={[52.4998520, 13.3497926]}
                             zoom={15}
                         >
                             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
