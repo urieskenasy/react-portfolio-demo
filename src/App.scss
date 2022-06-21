@@ -27,12 +27,12 @@ main {
 /* NAV */
 
 .nav-container {
-    position: absolute;
+    position:fixed ;
     display: flex;
     height: 100vh;
     width: 2.5vw;
     background: rgb(25, 25, 25);
-    z-index: 100;
+    z-index: 1000;
     align-items: center;
 }
 
@@ -54,6 +54,10 @@ main {
     color: white;
 
     
+}
+
+.dropDown-nav-ul {
+    display: none;
 }
 
 .icon {
@@ -108,6 +112,10 @@ main {
     display: none;
   }
 
+
+
+
+
   @media screen and (max-width: 550px) {
     .App {
         position: relative;
@@ -124,17 +132,17 @@ main {
     /* NAV */
     
     .nav-container {
-        position: absolute;
+    
         display: flex;
-        height: auto;
-        width: 6vw;
+        height:auto;
+        width: 10vw;
         background: rgb(25, 25, 25);
         z-index: 100;
-        top: 50%;
-        left: 0 ;
+        top: 12.8%;
+        right: 0 ;
         transform: translateY(-50%);
         align-items: center;
-        
+        justify-content: center;
     }
     
     .nav-container-ul {
@@ -143,6 +151,7 @@ main {
         justify-content: center;
         align-items: center;
         height: 50%;
+        display: none;
     }
     
     .nav-container-ul-li {
@@ -157,6 +166,22 @@ main {
         
     }
     
+    .dropDown-nav-ul {
+      display: flex;
+    flex-direction: column;
+background: transparent;
+
+      .nav-drop-down-list-items {
+        display: none;
+      }
+
+      .on {
+        display: flex;
+        flex-direction: column;
+      }
+
+    }
+
     .icon {
         color: white;
         font-size: 1rem;

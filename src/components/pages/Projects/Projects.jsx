@@ -99,26 +99,33 @@ export default function Projects() {
     return (
         <>
             <AnimatedPage>
+                <h1
+                    style={{
+                        textAlign: "center",
+                        display: "block",
+                        width: "100%",
+                        marginBottom: "20px;",
+                    }}
+                >
+                    <AnimatedLetters
+                        strArray={[
+                            "M",
+                            "y",
+                            " ",
+                            "P",
+                            "r",
+                            "o",
+                            "j",
+                            "e",
+                            "c",
+                            "t",
+                            "s",
+                        ]}
+                        idx={15}
+                        letterClass={letterClass}
+                    />
+                </h1>
                 <div className="projects-container">
-                    <h1>
-                        <AnimatedLetters
-                            strArray={[
-                                "M",
-                                "y",
-                                " ",
-                                "P",
-                                "r",
-                                "o",
-                                "j",
-                                "e",
-                                "c",
-                                "t",
-                                "s",
-                            ]}
-                            idx={15}
-                            letterClass={letterClass}
-                        />
-                    </h1>
                     <IoIosArrowBack
                         className="left-arrow"
                         onClick={prevSlide}
@@ -129,37 +136,37 @@ export default function Projects() {
                     />
                     {projects.map((item, i) => {
                         return (
-                            <div
+                            <div className="project-card-container">
+                                <div
+                                    className="project-BG"
+                                    style={{
+                                        backgroundImage: `url(${item.imageUrl})`,
+                                    }}
+                                ></div>
+                                <div className="project-card-content">
+                                    <h2>{item.title}</h2>
+                                    <h3>{item.text}</h3>
+                                    <div className="span-container">
+                                        <span>
+                                            <a href={item.gitHubUrl}>gitHub</a>
+                                        </span>
+                                        <span>
+                                            <a href="">live demo</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                        /* <div
                                 className={
                                     i === current ? "slide active" : "slide"
                                 }
                                 key={i}
                             >
                                 {i === current && (
-                                    <div className="project-card-container">
-                                        <img
-                                            style={{
-                                                width: "1000px",
-                                                height: " 500px",
-                                            }}
-                                            src={require(`${item.imageUrl}`)}
-                                        />
-                                        <h2>{item.title}</h2>
-                                        <h3>{item.text}</h3>
-                                        <div className="span-container">
-                                            <span>
-                                                <a href={item.gitHubUrl}>
-                                                    gitHub
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <a href="">live demo</a>
-                                            </span>
-                                        </div>
-                                    </div>
+                                    
                                 )}
-                            </div>
-                        );
+                            </div> */
                     })}
                 </div>
             </AnimatedPage>
