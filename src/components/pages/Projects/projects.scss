@@ -133,28 +133,12 @@
 }
 
 @media screen and (max-width: 550px) {
-    
     .projects-container {
-        width: 100vw;
-
-        position: relative;
         height: auto;
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
          grid-gap: 2rem;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-
     }
-    
-    .projects-container > h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
-    
-    
     .project-card-container {
         width: 300px;
         min-height: 300px;
@@ -165,62 +149,11 @@
         text-align: center;
         padding: 10px;
         position: relative;
-        background: rgb(25, 25, 25);
-        box-shadow: 0px 0 20px rgba(88, 88, 88, 0.804);
-        cursor: pointer;
     }
-    
     .project-BG {
         min-height: 200px;
         width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
-    
-    .project-card-content {
-        z-index: 10;
-        margin-bottom: 7px;
-    }
-    
-    .project-card-container h2 {
-        font-size: 1.2rem;
-    }
-    .project-card-container h3 {
-        font-size: 1rem;
-        font-weight: 200;
-        line-height: 15px;
-    }
-    
-    .span-container {
-        margin-top: 15px;
-    }
-    
-    .span-container span {
-        font-size: 1rem;
-        border: solid white 1px;
-        margin: 15px;
-        padding: 2px 15px;
-        border-radius: 5px;
-        transition: all 0.4s ease-in-out;
-    }
-    
-    .span-container span:hover {
-        font-size: 1rem;
-        border: solid white 1px;
-        background: white;
-    }
-    
-    .span-container span a {
-        text-decoration: none;
-        color: white;
-        transition: all 0.4s ease-in-out;
-    }
-    
-    .span-container span a:hover {
-        color: black;
-    }
-    
     .project-card-container img {
         width: 100%;
         height: 90%;
@@ -231,12 +164,9 @@
             transform: scale(1.1);
         }
     }
-    
 .projects-h1 {
     span {
         font-size: 2rem;
     }
 }
-
-
 }

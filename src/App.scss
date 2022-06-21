@@ -117,53 +117,24 @@ main {
 
 
   @media screen and (max-width: 550px) {
-    .App {
-        position: relative;
-    }
-    
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
-    
+
     /* NAV */
     
     .nav-container {
-    
+
         display: flex;
         height:auto;
         width: 10vw;
         background: rgb(25, 25, 25);
         z-index: 100;
-        top: 12.8%;
+        top: 0;
         right: 0 ;
-        transform: translateY(-50%);
         align-items: center;
         justify-content: center;
     }
     
     .nav-container-ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 50%;
         display: none;
-    }
-    
-    .nav-container-ul-li {
-        list-style: none;
-        padding: 0px 0;
-    }
-    
-    .nav-container-ul-li-link {
-        text-decoration: none;
-        color: white;
-    
-        
     }
     
     .dropDown-nav-ul {
@@ -181,56 +152,13 @@ background: transparent;
       }
 
     }
-
     .icon {
-        color: white;
         font-size: 1rem;
-        transition: all 0.3s ease-in-out;
     }
-    
     .active {
-    
         svg {
             color: #ffd700;
         animation: bounceIn 1s 1s;
-    
         }
     }
-    
-    .icon:hover {
-        color: #ffd700;
-        animation: pulsate-fwd 0.7s ease-in-out infinite both;
-    }
-    
-    @keyframes pulsate-fwd {
-        0% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-        50% {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-        }
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-    
-    
-    .loader-active {
-        display:block;
-        position: absolute;
-        left: 50%;
-        // margin: auto;
-        top: 55%;
-        transform: translate(-50%, -50%);
-        width :50px ;
-        height: 50px;
-        animation: fadeOut 1s 1s;
-        animation-fill-mode: forwards;
-    }
-    .loader-hidden {
-        display: none;
-      }
   }
