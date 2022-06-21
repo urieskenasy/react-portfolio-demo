@@ -70,13 +70,20 @@ export default function Projects() {
             text: "My first full on BootStarp landing page",
             gitHubUrl:
                 "https://github.com/urieskenasy/Bootstrap-First-short-project",
-            liveVersionUrl: "",
+            liveVersionUrl: "https://delicius-food-czd2000ex-urieskenasy.vercel.app/",
         },
         {
             title: "Studio-speaker-shop",
             imageUrl: "./images/speakershop.png",
             text: "A class study exercise",
             gitHubUrl: "https://github.com/urieskenasy/Studio-speaker-shop",
+            liveVersionUrl: "",
+        },
+        {
+            title: "Food selection App",
+            imageUrl: "./images/foodApp.png",
+            text: "single page app, foods selction",
+            gitHubUrl: "https://github.com/urieskenasy/deliciuss-app",
             liveVersionUrl: "",
         },
     ];
@@ -133,7 +140,7 @@ export default function Projects() {
                                             <a href={item.gitHubUrl}>gitHub</a>
                                         </span>
                                         <span>
-                                            <a href="">live demo</a>
+                                            <a href="https://delicius-food-czd2000ex-urieskenasy.vercel.app/">live demo</a>
                                         </span>
                                     </div>
                                 </div>

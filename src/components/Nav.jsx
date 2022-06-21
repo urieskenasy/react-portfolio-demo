@@ -6,7 +6,13 @@ import { FaHandshake } from "react-icons/fa";
 import { FaBuffer } from "react-icons/fa";
 import { FaProjectDiagram } from "react-icons/fa";
 import {GiHamburgerMenu} from 'react-icons/gi'
+import { motion } from "framer-motion"
 export default function Nav() {
+
+    const variants = {
+        open: { opacity: 1, x: 0 },
+        closed: { opacity: 0, x: "-100%" },
+      }
 
     const [ham, setHam] = useState(false)
 
@@ -60,8 +66,10 @@ export default function Nav() {
                 </li>
             </ul>
             <ul className='dropDown-nav-ul'>
-            <span onClick={handleClick}><GiHamburgerMenu/></span>
-            <div className={ham ? 'on' : 'nav-drop-down-list-items '}>
+            <span className='hamburger-icon' onClick={handleClick}><GiHamburgerMenu/></span>
+            <div
+    
+            >
             <li className="nav-container-ul-li">
                     <NavLink to="/" activeclassname="active">
                         <FaHouseUser className="icon" />

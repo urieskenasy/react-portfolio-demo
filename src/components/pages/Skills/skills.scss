@@ -2,19 +2,25 @@
     width: 100vw;
     height: 95vh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.skills-h1 {
-    margin-bottom: -100px;
+.h1-wrapper {
+    width: 100%;
+    height: 2rem;
+}
+
+.content-wrapper {
+    display: flex;
 }
 
 .skills-container-ul {
-    width: 49%;
+   flex-basis: 50%;
     height: 100%;
-    // padding-left: 50px;
+    margin-left: 200px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .skills-container-ul ul li {
@@ -33,7 +39,8 @@
 }
 
 .skills-container-images {
-    width: 49%;
+    flex-basis: 50%;
+
     height: 100%;
     display: flex;
     align-items: center;
@@ -55,39 +62,72 @@
 @media screen and (max-width: 550px) {
     .skills-container {
         width: 100vw;
-        height: 100vh;
-        margin-top: 50px;
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+        ;
+        padding: 2rem;
     }
-
+    
+    .h1-wrapper {
+        width: 100%;
+        height: 2rem;
+        margin: 1rem 0;
+        h1 {
+            span {
+font-size: 2rem;
+            }
+        }
+        
+    }
+    
+    .content-wrapper {
+        display: flex;
+    }
+    
     .skills-container-ul {
-        width:100px;
-     padding-left: 150px;
-    }
-
-    .skills-container-ul ul li {
-        font-size: 0.8rem;
-        width: 200px;
-    }
-
-    .skills-container-images {
-        width: auto;
+       flex-basis: 50%;
         height: 100%;
-        margin-right: 25px;
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
-
+    
+    .skills-container-ul ul li {
+        list-style: none;
+        padding: 10px 0px;
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-weight: 200;
+        transition: all 0.2s ease-in-out;
+        width: 100px;
+        border: white solid 1px;
+        text-align:center;
+    }
+    
+    .skills-container-ul ul li:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .skills-container-images {
+        flex-basis: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
     .skills-container-images img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
-
+    
     .skills-span {
         margin-top: 20px;
-        font-size: 0.8rem;
-        font-weight: 200;
-    }
-    .skills-h1 {
-        span {
-            font-size: 2rem;
-        }
+        font-size:1rem;
+        font-weight: 300;
     }
 }

@@ -81,31 +81,33 @@ export default function Skills() {
     return (
         <>
             <AnimatedPage>
-            <h1 className='skills-h1'
-                    style={{
-                        textAlign: "center",
-                    
-                              
-                    }}
-                >
-                    <AnimatedLetters
-                        strArray={[
-                            "M",
-                            "y",
-                            " ",
-                            "S",
-                            "k",
-                            "i",
-                            "l",
-                            "l",
-                            "s",  
-                        ]}
-                        idx={15}
-                        letterClass={letterClass}
-                    />
-                </h1>
-                <div className="skills-container">            
             
+                <div className="skills-container">    <div className='h1-wrapper'>
+                      <h1 className='skills-h1'
+                          style={{
+                              textAlign: "center",
+                          
+                                    
+                          }}
+                      >
+                          <AnimatedLetters
+                              strArray={[
+                                  "M",
+                                  "y",
+                                  " ",
+                                  "S",
+                                  "k",
+                                  "i",
+                                  "l",
+                                  "l",
+                                  "s",  
+                              ]}
+                              idx={15}
+                              letterClass={letterClass}
+                          />
+                      </h1>
+                </div>
+                <div className='content-wrapper'>
                     <div className="skills-container-ul">
                         <ul>
                             {skills.map((item, i) => (
@@ -121,6 +123,8 @@ export default function Skills() {
                             <span className="skills-span">{text}</span>
                         </div>
                     )}
+            
+                </div>
                 </div>
             </AnimatedPage>
             <Loader type="ball-grid-pulse" style={{transform: 'scale(2)'}} />
