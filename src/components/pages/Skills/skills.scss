@@ -1,13 +1,17 @@
 .skills-container {
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     display: flex;
+}
+
+.skills-h1 {
+    margin-bottom: -100px;
 }
 
 .skills-container-ul {
     width: 49%;
     height: 100%;
-    padding-left: 50px;
+    // padding-left: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,11 +19,11 @@
 
 .skills-container-ul ul li {
     list-style: none;
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 1.8rem;
     font-weight: 200;
     transition: all 0.2s ease-in-out;
-    width: 200px;
+    width: 100px;
 }
 
 .skills-container-ul ul li:hover {
@@ -55,12 +59,13 @@
         display: flex;
         align-items: space-evenly;
         justify-content: space-evenly;
+        margin-top: 100px;
     }
 
     .skills-container-ul {
-        width: auto;
+        width:100px;
         height: 100%;
-        // padding-left: 50px;
+     padding-left: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -100,5 +105,10 @@
         margin-top: 20px;
         font-size: 0.8rem;
         font-weight: 200;
+    }
+    .skills-h1 {
+        span {
+            font-size: 2rem;
+        }
     }
 }

@@ -81,16 +81,7 @@ export default function Projects() {
         },
     ];
 
-    const [current, setCurrent] = useState(0);
-    const length = projects.length;
 
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
 
     if (!Array.isArray(projects) || projects.length <= 0) {
         return null;
@@ -99,12 +90,11 @@ export default function Projects() {
     return (
         <>
             <AnimatedPage>
-                <h1
+                <h1 className='projects-h1'
                     style={{
                         textAlign: "center",
                         display: "block",
                         width: "100%",
-                        marginBottom: "20px;",
                     }}
                 >
                     <AnimatedLetters
@@ -126,14 +116,6 @@ export default function Projects() {
                     />
                 </h1>
                 <div className="projects-container">
-                    <IoIosArrowBack
-                        className="left-arrow"
-                        onClick={prevSlide}
-                    />
-                    <IoIosArrowForward
-                        className="right-arrow"
-                        onClick={nextSlide}
-                    />
                     {projects.map((item, i) => {
                         return (
                             <div className="project-card-container">
