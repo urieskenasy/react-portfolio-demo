@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "framer-motion": "^6.3.11",
+    "gsap": "^3.10.4",
     "gsap-trial": "^3.10.4",
     "loaders.css": "^0.1.2",
     "react": "^18.1.0",
@@ -25,6 +26,7 @@
     "react-scripts": "5.0.1",
     "react-snowfall": "^1.1.2",
     "react-snowflakes": "^1.0.0",
+    "react-sparkle": "^1.0.9",
     "react-starfield-animation": "^1.0.1",
     "sass": "^1.52.3",
     "web-vitals": "^2.1.4"
