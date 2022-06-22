@@ -107,6 +107,17 @@ p:hover {
 
 @media screen and (max-width: 550px) {
 
+    .home-container {
+        width: 95vw;
+        height: 95vh;
+    
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     .h1-p-container {
         width: 100vw;
@@ -140,7 +151,7 @@ p:hover {
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
             bottom: 280px;
-            left: 350px;
+            left: 360px;
             bottom: 250px;
         }
     }
@@ -184,8 +195,8 @@ p:hover {
     .logo-container > svg {
         transform: scale(0.5);
         position: absolute;
-        top: 275px;
-        left: -110px;
-        display: block;
+        top: 220px;
+        left: -590px;
+    
     }
 }
