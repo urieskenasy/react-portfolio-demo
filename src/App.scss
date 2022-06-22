@@ -125,12 +125,15 @@ main {
         display: flex;
         height:auto;
         width: 10vw;
-        background: rgb(25, 25, 25);
+        background: #000;
         z-index: 100;
-        top: 0;
-        right: 0 ;
+        top: 1px;
+        right: 1px ;
         align-items: center;
         justify-content: center;
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+        border-radius: 2rem;
+    
     }
     
     .nav-container-ul {
@@ -142,19 +145,25 @@ main {
     flex-direction: column;
    background: transparent;
 
+
+
       .off {
-        display: none;
+         opacity: 0;
       }
 
       .on {
         display: flex;
         flex-direction: column;
+        overflow: auto;
+        transition: opacity 0.8s ease, transform 0.6s ease, visibility 0.6s;
+        opacity:1;
       }
 
     }
     .icon {
         font-size: 2rem;
         margin-bottom: 1rem;
+        
     }
     .hamburger-icon {
         font-size: 2rem;
@@ -166,4 +175,5 @@ main {
         animation: bounceIn 1s 1s;
         }
     }
+
   }

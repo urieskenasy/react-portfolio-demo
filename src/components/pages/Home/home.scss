@@ -32,8 +32,6 @@ div {
     height: 95vh;
 }
 
-
-
 .homePage-h1 {
     &::before {
         content: "<h1>";
@@ -56,7 +54,7 @@ div {
         animation: fadeIn 1s 1.7s backwards;
         opacity: 0.6;
         bottom: 280px;
-        left: 750px;
+        left: 810px;
     }
 }
 
@@ -106,11 +104,10 @@ p:hover {
 }
 
 @media screen and (max-width: 550px) {
-
     .home-container {
         width: 95vw;
         height: 95vh;
-    
+
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -128,7 +125,6 @@ p:hover {
         justify-content: center;
         padding: 10px;
     }
-
 
     .homePage-h1 {
         span {
@@ -197,6 +193,5 @@ p:hover {
         position: absolute;
         top: 220px;
         left: -590px;
-    
     }
 }

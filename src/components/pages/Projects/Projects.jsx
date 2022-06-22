@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./projects.scss";
 import AnimatedPage from "../../AnimatedPage";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import AnimatedLetters from "../../animatedLetters/AnimatedLetters";
 import Loader from "react-loaders";
 export default function Projects() {
@@ -70,7 +69,8 @@ export default function Projects() {
             text: "My first full on BootStarp landing page",
             gitHubUrl:
                 "https://github.com/urieskenasy/Bootstrap-First-short-project",
-            liveVersionUrl: "https://delicius-food-czd2000ex-urieskenasy.vercel.app/",
+            liveVersionUrl:
+                "https://delicius-food-czd2000ex-urieskenasy.vercel.app/",
         },
         {
             title: "Studio-speaker-shop",
@@ -88,8 +88,6 @@ export default function Projects() {
         },
     ];
 
-
-
     if (!Array.isArray(projects) || projects.length <= 0) {
         return null;
     }
@@ -97,7 +95,8 @@ export default function Projects() {
     return (
         <>
             <AnimatedPage>
-                <h1 className='projects-h1'
+                <h1
+                    className="projects-h1"
                     style={{
                         textAlign: "center",
                         display: "block",
@@ -140,7 +139,9 @@ export default function Projects() {
                                             <a href={item.gitHubUrl}>gitHub</a>
                                         </span>
                                         <span>
-                                            <a href="https://delicius-food-czd2000ex-urieskenasy.vercel.app/">live demo</a>
+                                            <a href="https://delicius-food-czd2000ex-urieskenasy.vercel.app/">
+                                                live demo
+                                            </a>
                                         </span>
                                     </div>
                                 </div>
@@ -159,27 +160,15 @@ export default function Projects() {
                     })}
                 </div>
             </AnimatedPage>
-            <Loader type="ball-grid-pulse" style={{ transform: "scale(2)" }} />
+            <Loader
+                type="ball-grid-pulse"
+                style={{
+                    transform: "scale(0.5)",
+                    position: "fixed",
+                    top: "50%",
+                    left: "50%",
+                }}
+            />
         </>
     );
-}
-
-{
-    /* {projects.map((item, i) => {
-                    return (
-                        <div className="project-card-container">
-                            <img src={require(`${item.imageUrl}`)} />
-                            <h2>{item.title}</h2>
-                            <h3>{item.text}</h3>
-                            <div className="span-container">
-                                <span>
-                                    <a href={item.gitHubUrl}>gitHub</a>
-                                </span>
-                                <span>
-                                    <a href="">live demo</a>
-                                </span>
-                            </div>
-                        </div>
-                    );
-                })} */
 }

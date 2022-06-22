@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaHouseUser } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
@@ -7,11 +7,12 @@ import { FaBuffer } from "react-icons/fa";
 import { FaProjectDiagram } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion } from "framer-motion";
+import AnimatedPage from "./AnimatedPage";
 export default function Nav() {
-    const variants = {
-        open: { opacity: 1, x: 0 },
-        closed: { opacity: 0, x: "-100%" },
-    };
+    // const variants = {
+    //     open: { opacity: 1, x: 0 },
+    //     closed: { opacity: 0, x: "-100%" },
+    // };
 
     const [ham, setHam] = useState(false);
 
@@ -64,11 +65,12 @@ export default function Nav() {
                     </NavLink>
                 </li>
             </ul>
-            <ul className='dropDown-nav-ul' >
+
+            <ul className="dropDown-nav-ul">
                 <span className="hamburger-icon" onClick={handleClick}>
                     <GiHamburgerMenu />
                 </span>
-                <div className={ham ? 'on' : 'off'}>
+                <div className={ham ? "on" : "off"}>
                     <li className="nav-container-ul-li">
                         <NavLink to="/" activeclassname="active">
                             <FaHouseUser className="icon" />
@@ -111,7 +113,7 @@ export default function Nav() {
                             <FaHandshake className="icon" />
                         </NavLink>
                     </li>
-                    </div>
+                </div>
             </ul>
         </div>
     );

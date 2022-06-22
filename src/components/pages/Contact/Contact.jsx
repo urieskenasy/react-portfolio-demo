@@ -128,7 +128,7 @@ export default function Contact() {
                     </div>
                     <div class="map-wrap">
                         <MapContainer
-                            center={[52.4998520, 13.3497926]}
+                            center={[52.499852, 13.3497926]}
                             zoom={15}
                         >
                             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -141,7 +141,15 @@ export default function Contact() {
                     </div>
                 </div>
             </AnimatedPage>
-            <Loader type="ball-grid-pulse" style={{ transform: "scale(2)" }} />
+            <Loader
+                type="ball-grid-pulse"
+                style={{
+                    transform: "scale(0.5)",
+                    position: "fixed",
+                    top: "50%",
+                    left: "50%",
+                }}
+            />
         </>
     );
 }

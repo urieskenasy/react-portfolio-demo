@@ -70,64 +70,78 @@ export default function Skills() {
         setImgUrl(url.url);
         setText(url.text);
     };
-        //
-        const [letterClass, setLetterClass] = useState("text-animate");
-        //
-        useEffect(() => {
-            setTimeout(() => {
-                setLetterClass("text-animate-hover");
-            }, 3000);
-        }, []);
+    //
+    const [letterClass, setLetterClass] = useState("text-animate");
+    //
+    useEffect(() => {
+        setTimeout(() => {
+            setLetterClass("text-animate-hover");
+        }, 3000);
+    }, []);
     return (
         <>
             <AnimatedPage>
-            
-                <div className="skills-container">    <div className='h1-wrapper'>
-                      <h1 className='skills-h1'
-                          style={{
-                              textAlign: "center",
-                          
-                                    
-                          }}
-                      >
-                          <AnimatedLetters
-                              strArray={[
-                                  "M",
-                                  "y",
-                                  " ",
-                                  "S",
-                                  "k",
-                                  "i",
-                                  "l",
-                                  "l",
-                                  "s",  
-                              ]}
-                              idx={15}
-                              letterClass={letterClass}
-                          />
-                      </h1>
-                </div>
-                <div className='content-wrapper'>
-                    <div className="skills-container-ul">
-                        <ul>
-                            {skills.map((item, i) => (
-                                <li onMouseEnter={() => handleMouseEnter(item)}>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                <div className="skills-container">
+                    {" "}
+                    <div className="h1-wrapper">
+                        <h1
+                            className="skills-h1"
+                            style={{
+                                textAlign: "center",
+                            }}
+                        >
+                            <AnimatedLetters
+                                strArray={[
+                                    "M",
+                                    "y",
+                                    " ",
+                                    "S",
+                                    "k",
+                                    "i",
+                                    "l",
+                                    "l",
+                                    "s",
+                                ]}
+                                idx={15}
+                                letterClass={letterClass}
+                            />
+                        </h1>
                     </div>
-                    {imgUrl && (
-                        <div className="skills-container-images">
-                            <img src={imgUrl} />
-                            <span className="skills-span">{text}</span>
+                    <div className="content-wrapper">
+                        <div className="skills-container-ul">
+                            <ul>
+                                {skills.map((item, i) => (
+                                    <li
+                                        onMouseEnter={() =>
+                                            handleMouseEnter(item)
+                                        }
+                                    >
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                    )}
-            
-                </div>
+                        {imgUrl && (
+                            <div className="skills-container-images">
+                                <img
+                                    src={imgUrl}
+                                    alt="coding languages logos"
+                                />
+                                <span className="skills-span">{text}</span>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </AnimatedPage>
-            <Loader type="ball-grid-pulse" style={{transform: 'scale(2)'}} />
+            <Loader
+                type="ball-grid-pulse"
+                style={{
+                    transform: "scale(0.5)",
+                    position: "fixed",
+                    top: "50%",
+                    left: "50%",
+                }}
+            />
         </>
     );
 }
