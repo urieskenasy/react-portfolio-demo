@@ -32,7 +32,7 @@ main {
     height: 100vh;
     width: 2.5vw;
     background: rgb(25, 25, 25);
-    z-index: 1000;
+    z-index: 11;
     align-items: center;
 }
 
@@ -62,7 +62,7 @@ main {
 
 .icon {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -140,9 +140,9 @@ main {
     .dropDown-nav-ul {
       display: flex;
     flex-direction: column;
-background: transparent;
+   background: transparent;
 
-      .nav-drop-down-list-items {
+      .off {
         display: none;
       }
 
@@ -158,6 +158,7 @@ background: transparent;
     }
     .hamburger-icon {
         font-size: 2rem;
+        cursor: pointer;
     }
     .active {
         svg {

@@ -51,20 +51,93 @@
     font-size: 1.4rem;
     text-align: justify;
 }
-// p:nth-child(1) {
-//     animation-delay: 1.2s;
-// }
-// p:nth-child(2) {
-//     animation-delay: 2.2s;
-// }
-// p:nth-child(3) {
-//     animation-delay: 3.2s;
-// }
 p:hover {
     cursor: pointer;
-    // animation: bounceIn 1s 1s;
-    // animation: rubberBand 1s;
 }
+
+.stage-cube-cont {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 18%;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0px lightyellow;
+    }
+
+    .face1 {
+        transform: translateZ(100px);
+        color: #dd0031;
+    }
+    .face2 {
+        transform: rotateY(90deg) translateZ(100px);
+        color: #f06529;
+    }
+    .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+        color: #28a4d9;
+    }
+    .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+        color: #5ed4f4;
+    }
+    .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+        color: #efd81d;
+    }
+    .face6 {
+        transform: rotateX(-90deg) translateZ(100px);
+        color: #ec4d28;
+    }
+}
+
+@keyframes spincube {
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+        transform: rotateX(90deg);
+    }
+}
+
 
 @media screen and (max-width: 550px) {
     .about-container {
@@ -73,18 +146,17 @@ p:hover {
         padding-left: 6px;
         display: flex;
         flex-direction: column;
-        flex-wrap: no-wrap;
+        position: relative;
     }
-    
     .about-h1-p-container {
         width: 100%;
+        height:auto;
         h1{
             span{
                 font-size: 2rem;
             }
         }
     }
-    
     .about-h1-container {
         width: 100%;
         height:auto;
@@ -92,53 +164,18 @@ p:hover {
         justify-content: center;
         align-items: center;
     }
-    
-    .about-img-container {
-        height: 40%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("./img/Uri.jpeg");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        border-radius: 50%;
-        margin-bottom: 5px;
-        padding: 15px;
-    }
-    
-    .about-img-container img {
-        height: 50%;
-        width: 50%;
-    }
-    
-    .about-p-container {
-        height: auto;
-        width: 100%;
-        padding: 20px;
-    }
-    
     .about-p-container p {
-        padding: 10px;
-        // animation: flicker-in-1 3s linear both;
-        animation-delay: 1.2s;
-        transition: ease 0.4s;
         font-size: 0.8rem;
-        text-align: justify;
     }
-    // p:nth-child(1) {
-    //     animation-delay: 1.2s;
-    // }
-    // p:nth-child(2) {
-    //     animation-delay: 2.2s;
-    // }
-    // p:nth-child(3) {
-    //     animation-delay: 3.2s;
-    // }
-    p:hover {
-        cursor: pointer;
-        // animation: bounceIn 1s 1s;
-        // animation: rubberBand 1s;
+    .stage-cube-cont {
+        width:100%;
+        height: 50%;
+        position: absolute;
+        top: 410px;
+    }
+    .cubespinner {
+        position: fixed;
+        bottom: 15rem;
+        z-index: 10;
     }
 }

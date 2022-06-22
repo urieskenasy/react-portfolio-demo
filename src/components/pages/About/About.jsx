@@ -3,6 +3,14 @@ import "./about.scss";
 import AnimatedPage from "../../AnimatedPage";
 import AnimatedLetters from "../../animatedLetters/AnimatedLetters";
 import Loader from "react-loaders";
+import {FaAngular} from 'react-icons/fa';
+import {FaCss3Alt} from 'react-icons/fa';
+import {FaGitAlt} from 'react-icons/fa';
+import {FaHtml5} from 'react-icons/fa';
+import {TbBrandJavascript} from 'react-icons/tb';
+import {FaReact} from 'react-icons/fa';
+import {DepthOfFieldSnowfall} from 'react-snowflakes';
+import Snowfall from 'react-snowfall';
 export default function About() {
     //
     const [letterClass, setLetterClass] = useState("text-animate");
@@ -61,7 +69,34 @@ export default function About() {
                             </p>
                         </div>
                     </div>
-                    <div className="about-img-container"></div>
+            
+                        <div className="stage-cube-cont">
+                        <Snowfall snowflakeCount={100} />        
+                            <div className="cubespinner">
+                                <div className="face1">
+                                    <FaAngular />
+                                </div>
+                                <div className="face2">
+                                    <FaHtml5 />
+                                </div>
+                                <div className="face3">
+                                    <FaCss3Alt />
+                                </div>
+                                <div className="face4">
+                                    <FaReact/>
+                                </div>
+                                <div className="face5">
+                                    <TbBrandJavascript
+                                    />
+                                </div>
+                                <div className="face6">
+                                    <FaGitAlt />
+                                </div>
+                            </div>
+
+                </div>
+
+                
                 </div>
             </AnimatedPage>
             <Loader type="ball-grid-pulse" style={{ transform: "scale(2)" }} />
