@@ -30,7 +30,7 @@ export default function Nav() {
                 <li className="nav-container-ul-li">
                     <NavLink
                         to="/About"
-                        className="nav-container-ul-li-link"
+                        className="nav-container-ul-li-link about-link"
                         activeclassname="active"
                     >
                         <FaInfoCircle className="icon" />
@@ -40,7 +40,7 @@ export default function Nav() {
                 <li className="nav-container-ul-li">
                     <NavLink
                         to="/Skills"
-                        className="nav-container-ul-li-link"
+                        className="nav-container-ul-li-link skills-link"
                         activeclassname="active"
                     >
                         <FaBuffer className="icon" />
@@ -49,7 +49,7 @@ export default function Nav() {
                 <li className="nav-container-ul-li">
                     <NavLink
                         to="/Projects"
-                        className="nav-container-ul-li-link"
+                        className="nav-container-ul-li-link portfolio-link"
                         activeclassname="active"
                     >
                         <FaProjectDiagram className="icon" />
@@ -58,7 +58,7 @@ export default function Nav() {
                 <li className="nav-container-ul-li">
                     <NavLink
                         to="/Contact"
-                        className="nav-container-ul-li-link"
+                        className="nav-container-ul-li-link contact-link"
                         activeclassname="active"
                     >
                         <FaHandshake className="icon" />
@@ -68,7 +68,7 @@ export default function Nav() {
 
             <ul className="dropDown-nav-ul">
                 <span className="hamburger-icon" onClick={handleClick}>
-                    <GiHamburgerMenu />
+                    <GiHamburgerMenu className={`svg ${ham ? 'svg-animated' : ''}`}/>
                 </span>
                 <div className={ham ? "on" : "off"}>
                     <li className="nav-container-ul-li">

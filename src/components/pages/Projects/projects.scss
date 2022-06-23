@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
     grid-gap: 3rem;
+    overflow: auto;
 }
 
 .projects-container > h1 {
@@ -31,6 +32,28 @@
     min-height: 300px;
     cursor: pointer;
     border-radius: 1rem;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        background: rgb(25, 25, 25);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        opacity: 0;
+    }
+    &:hover:after {
+        opacity: 0.85;
+    }
+    &:hover .project-card-content {
+        bottom: 0;
+        background: transparent;
+    }
 }
 
 .project-BG {
@@ -47,16 +70,17 @@
 }
 
 .project-card-content {
-    z-index: 10;
-    padding: 5rem, 0rem;
     position: absolute;
-    bottom: 0;
-    background: rgba(41, 41, 41, 0.67);
     width: 100%;
-    height: 50%;
-    opacity: 0;
+    z-index: 3;
+    padding: 10px 20px;
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    border-radius: 1rem;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0,
+        rgba(0, 0, 0, 1)
+    );
+    bottom: -70px;
 }
 
 .project-card-content:hover {
@@ -102,16 +126,7 @@
     color: black;
 }
 
-.project-card-container img {
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
-    transition: all 0.2s ease-in-out;
 
-    &:hover {
-        transform: scale(1.1);
-    }
-}
 
 
 @media screen and (max-width: 550px) {
@@ -122,30 +137,26 @@
          grid-gap: 2rem;
     }
     .project-card-container {
-        width: 300px;
         min-height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 10px;
-        position: relative;
-    }
-    .project-BG {
-        min-height: 200px;
-        width: 100%;
-    }
-    .project-card-container img {
-        width: 100%;
-        height: 90%;
-        object-fit: cover;
-        transition: all 0.2s ease-in-out;
+        width: 300px;
     
-        &:hover {
-            transform: scale(1.1);
+        &:after {
+            content: "";
+            background: transparent;
+    
+        }
+    
+      .project-card-content {
+            bottom: 0;
+            background: rgb(25, 25, 25);
+    
         }
     }
+    .project-BG {
+        height: 60%;
+        width: 100%;
+    }
+
 .projects-h1 {
     span {
         font-size: 2rem;

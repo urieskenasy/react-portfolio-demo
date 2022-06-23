@@ -42,7 +42,89 @@ main {
     justify-content: center;
     align-items: center;
     height: 50%;
+    a {
+        font-size: 22px;
+        color: #4d4d4e;
+        display: block;
+        line-height: 51px;
+        height: 51px;
+        position: relative;
+        text-decoration: none;
+
+        i {
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+            color: #ffd700;
+
+            svg {
+                opacity: 0;
+            }
+
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &:after {
+            content: "";
+            font-size: 7px;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 0;
+            left: -5px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+
+        &:first-child {
+            &:after {
+                content: "HOME";
+                left: 2px;
+            }
+        }
+    }
+
+    a.about-link {
+        &:after {
+            content: "ABOUT";
+            left: -3px;
+        }
+    }
+
+    a.contact-link {
+        &:after {
+            content: "CONTACT";
+            left: -7px;
+        }
+    }
+
+    a.skills-link {
+        &:after {
+            content: "SKILLS";
+            left: -2px;
+        }
+    }
+
+    a.portfolio-link {
+        &:after {
+            content: "PROJECTS";
+            left: -8px;
+        }
+    }
+
+    a.active {
+        svg {
+            color: #ffd700;
+        }
+    }
 }
+
 
 .nav-container-ul-li {
     list-style: none;
@@ -125,15 +207,14 @@ main {
         display: flex;
         height:auto;
         width: 10vw;
-        background: #000;
+        background:transparent;
         z-index: 100;
         top: 1px;
         right: 1px ;
         align-items: center;
         justify-content: center;
-        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+        transition: all 5s;
         border-radius: 2rem;
-    
     }
     
     .nav-container-ul {
@@ -142,21 +223,37 @@ main {
     
     .dropDown-nav-ul {
       display: flex;
-    flex-direction: column;
-   background: transparent;
-
+      flex-direction: column;
+      background: transparent;
+      animation: all 2s;
 
 
       .off {
-         opacity: 0;
+        animation: navAnimationOff 1s;
+        // display: none;
+        // opacity: 0;
+        transform-origin: top;
+        transform: scale(0) ; 
+        transition: opacity 0.8s ease, transform 0.6s ease, visibility 0.6s;
       }
 
       .on {
         display: flex;
         flex-direction: column;
-        overflow: auto;
         transition: opacity 0.8s ease, transform 0.6s ease, visibility 0.6s;
         opacity:1;
+       animation: navAnimationOn 1s;
+       height: 400px;
+      }
+
+.svg {
+    transition:  all 1s ;
+}
+
+      .svg-animated {
+
+        transform: rotate(360deg) ;
+
       }
 
     }
@@ -173,6 +270,24 @@ main {
         svg {
             color: #ffd700;
         animation: bounceIn 1s 1s;
+        }
+    }
+
+    @keyframes navAnimationOn {
+        from {
+            height: 0;
+        }
+        to {
+            height:400px;
+        }
+    }
+    @keyframes navAnimationOff {
+        from {
+            height:400px;
+        }
+        to {
+            height: 0;
+            opacity: 0;
         }
     }
 

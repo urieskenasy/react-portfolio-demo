@@ -54,6 +54,7 @@ export default function Home() {
                         fadeOutSpeed={2}
                         flickerSpeed={"normal"}
                         flicker={false}
+                        
                     />
                     <div className="h1-p-container">
                         <h1 className="homePage-h1">

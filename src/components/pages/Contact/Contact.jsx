@@ -67,6 +67,7 @@ export default function Contact() {
                             <form ref={form} onSubmit={sendEmail}>
                                 <label for="name">Full Name</label>
                                 <input
+                                type='text'
                                     name="name"
                                     required
                                     placeholder="Name"
@@ -81,6 +82,7 @@ export default function Contact() {
                                 <label for="subject">Subject</label>
                                 <input
                                     name="subject"
+                                    type='text'
                                     required
                                     placeholder="Subject"
                                 />
@@ -90,7 +92,7 @@ export default function Contact() {
                                     required
                                     placeholder="Your Message"
                                 />
-                                <button>send</button>
+                                <button type='submit' value='SEND'>send</button>
                             </form>
                         </div>
 
